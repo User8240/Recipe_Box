@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
   <body>
+    <h1 class="header">@Html.ActionLink("Home", "Index", "Home")</h1>
+    <h3 class="bar">@Html.ActionLink("Cuisine Types", "Index", "Categories") 🍽 @Html.ActionLink("Your Recipes", "Index", "Recipes")</h3>
+    <br>
+    <div class="container">
+      <div class="jumbotron">
     @RenderBody()
     @await Html.PartialAsync("Footer")
   </body>
