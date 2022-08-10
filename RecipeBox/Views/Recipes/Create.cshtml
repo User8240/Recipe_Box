@@ -1,0 +1,25 @@
+@{
+  Layout = "_Layout";
+}
+
+@model RecipeBox.Models.Recipe
+
+<h4>Add a new recipe</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name, new { required="required"})
+
+    @Html.Label("Ingredients: ")
+    @Html.TextBoxFor(model => model.Ingredient, new { required="required"})
+
+    @Html.Label("Instructions: ")
+    @Html.TextBoxFor(model => model.Instruction, new { required="required"})
+
+    @Html.LabelFor(model => model.Rate)
+    @Html.TextBoxFor(model => model.Rate, new { type="number", min="1", max="10", required="required"})
+
+    <input type="submit" value="Add new recipe" class="btn btn-default" />
+}
+<p>@Html.ActionLink("Show all items", "Index")</p>

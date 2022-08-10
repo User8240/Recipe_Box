@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+@using RecipeBox.Models;
+
+<h1>Search for a recipe by Ingredient!</h1>
+
+<form action="/Recipes/ShowSearchResults" method="post">
+  <label for="searchPhrase">Search Phrase: </label>
+  <input name="searchPhrase" id="searchPhrase" type="text">
+  <button type="submit">Search!</button>
+</form>
+
+<p>@Html.ActionLink("Back to list", "Index")</p> 
